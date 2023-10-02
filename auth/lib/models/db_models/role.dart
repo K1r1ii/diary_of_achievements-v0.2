@@ -7,7 +7,7 @@ class _Role {
   @primaryKey
   int? id;
 
-  @Column( nullable: false)
+  @Column( nullable: false, unique: true)
   String? title;
 
   String? description;

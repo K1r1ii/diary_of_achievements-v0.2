@@ -7,9 +7,7 @@ class AppRoleController extends ResourceController {
   final ManagedContext managedContext;
 
   @Operation.put()
-  Future<Response> createRole(
-    @Bind.body() Role role
-  ) async {
+  Future<Response> createRole(@Bind.body() Role role) async {
     // final String title = "admin";
     // final String discription = "admin - бог";
     late final int roleId;
@@ -19,14 +17,21 @@ class AppRoleController extends ResourceController {
           ..values.title = role.title
           ..values.description = role.description;
 
+        
         final createRole = await qCreateRole.insert();
         roleId = createRole.asMap()["id"];
       });
-      final dataCreateRole = await managedContext.fetchObjectWithID(roleId);
-      final data = dataCreateRole!.asMap();
-      return AppResponse.ok(body: data, message: "Роль успешно добавлена");
+      print("попытка добавить роль");
+      final dataCreateRole =
+        await managedContext.fetchObjectWithID<Role>(roleId);
+          
+      Map<String, dynamic> data =  dataCreateRole!.asMap();
+      print(data);
+      return AppResponse.ok(
+          body: data,
+          message: "Роль успешно добавлена");
     } catch (e) {
-      return AppResponse.badRequest(message: "Роль не была добавлена");
+      return AppResponse.serverError(e, message: "Роль не была добавлена");
     }
   }
 }
