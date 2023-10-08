@@ -10,6 +10,7 @@ class AppRoleController extends ResourceController {
   Future<Response> createRole(@Bind.body() Role role) async {
     // final String title = "admin";
     // final String discription = "admin - бог";
+    
     late final int roleId;
     try {
       await managedContext.transaction((transaction) async {
@@ -21,7 +22,6 @@ class AppRoleController extends ResourceController {
         final createRole = await qCreateRole.insert();
         roleId = createRole.asMap()["id"];
       });
-      print("попытка добавить роль");
       final dataCreateRole =
         await managedContext.fetchObjectWithID<Role>(roleId);
           

@@ -10,6 +10,7 @@ class _Role {
   @Column( nullable: false, unique: true)
   String? title;
 
+  @Column(nullable: true)
   String? description;
 
   ManagedSet<UserRole>? userList;

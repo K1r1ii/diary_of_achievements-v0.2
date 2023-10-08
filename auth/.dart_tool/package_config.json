@@ -26,6 +26,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "auth_header",
+      "rootUri": "file:///C:/Users/admin/AppData/Local/Pub/Cache/hosted/pub.dev/auth_header-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///C:/Users/admin/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
@@ -166,6 +172,12 @@
     {
       "name": "io",
       "rootUri": "file:///C:/Users/admin/AppData/Local/Pub/Cache/hosted/pub.dev/io-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "jaguar_jwt",
+      "rootUri": "file:///C:/Users/admin/AppData/Local/Pub/Cache/hosted/pub.dev/jaguar_jwt-3.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -410,7 +422,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-10-02T18:22:19.366324Z",
+  "generated": "2023-10-03T15:46:15.983946Z",
   "generator": "pub",
   "generatorVersion": "3.1.0"
 }

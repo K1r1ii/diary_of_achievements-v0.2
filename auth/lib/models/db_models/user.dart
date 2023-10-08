@@ -13,20 +13,26 @@ class _User {
   @Column(nullable: false)
   String? surName;
 
+  @Column(nullable: true)
   String? patronymic;
 
   @Column(nullable: false)
   String? login;
 
-  @Serialize(input:  true, output: false)
+  //В базу данных данное поле не заносится
+  @Serialize(input: true, output: false)
+  String? password;
+
+  //@Serialize(input:  true, output: false)
   @Column(nullable: false)
   String? hashPassword;
 
   @Column(nullable: true)
-  String? successToken;
+  String? accessToken;
 
   @Column(nullable: true)
   String? refreshToken;
 
   ManagedSet<UserRole>? roleList;
 }
+

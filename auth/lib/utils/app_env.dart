@@ -3,6 +3,8 @@ import 'dart:io';
 abstract class AppEnv {
   AppEnv._();
 
+  static final String adminRole = "admin";
+  static final String passwordSuperAdmin = "Welcome5%";
   static final String secretKey =
       Platform.environment["SECRET_KEY"] ?? "SECRET_KEY";
   static final String port = Platform.environment["PORT"] ?? "6200";
@@ -22,8 +24,8 @@ abstract class AppEnv {
   };
 
   static final Map<int, String> roles = {
-    1 : "admin",
-    2 : "teacher",
-    3 : "student"
+    1: "admin",
+    2: "teacher",
+    3: "student"
   };
 }
