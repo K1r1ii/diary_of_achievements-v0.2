@@ -10,7 +10,6 @@ dependencies:
   conduit: ^4.3.7
   conduit_core: ^4.3.6
   conduit_postgresql: ^4.3.2
-  jaguar_jwt: 3.0.0
 
 dev_dependencies:
   test: ^1.21.6
